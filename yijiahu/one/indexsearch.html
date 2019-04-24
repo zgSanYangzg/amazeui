@@ -1,0 +1,155 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>医院搜索</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- Amaze UI CSS -->
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+<style type="text/css">
+  .one-ico{
+    color: #bbb7b7;
+  }
+  .one-txt{
+    background-color: #efefef;
+    height: 26px;
+  }
+  .one-txt-right{
+    color: #aaaaaa;
+  }
+  .one-div{
+    margin-top:5px;
+    height: 26px;
+    padding: 10px;
+  }
+  .two-hr{
+    border-top: 5px solid #ddd;
+  }
+  .sev-img{
+    height: 70px;
+  }
+  .sev-hospital{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .sev-lab{
+    font-size: 12px;
+    color: #f37b1d;
+    float: left;
+  }
+</style>
+</head>
+<body>
+
+<div class="am-g one-div" >
+  <div class="am-u-sm-9 am-u-md-10">
+    <div class="am-form-group am-form-icon">
+      <i class="am-icon-search one-ico"></i>
+      <input type="text" class="am-form-field am-round one-txt" placeholder="搜索医院">
+      
+    </div>
+  </div>
+  <div class="am-u-sm-3 am-u-md-2">
+    <span class="one-txt-right">取消</span>
+  </div>
+</div>
+<div class="am-u-sm-12 " id="hisArea" style="display: block">
+    <div  class="am-panel am-panel-default">
+      <header class="am-panel-hd">
+        <h3 class="am-panel-title">搜索记录</h3>
+      </header>
+       <ul class="am-list am-list-static" id="hisAreaUl">
+          <li><span class="hisHosPan">黑</span><span class="am-fr">X</span></li>
+          <li><span class="hisHosPan">黑</span><span class="am-fr">X</span></li>
+
+      </ul>
+      <footer class="am-panel-footer am-text-center" id="deleteAll" onClick="emptyHistory()">清空历史记录</footer>
+    </div>
+</div>
+<hr data-am-widget="divider" style="" class="am-divider two-hr" />
+<div class="am-g">
+  <div class="am-u-sm-12">
+      <div id="orderArea" data-am-widget="tabs" class="am-tabs am-tabs-d2" >
+          <ul class="am-tabs-nav am-cf" style="background-color:white">
+              <li class="am-active" style="border-bottom: 0;" id="ghli">
+                  <div id="ghbt" style="left: 25%;border-top: 3px solid #29aff6;width: 90px;bottom: 0;position: absolute;display: block"></div>
+                  <a href="javascript:toHos()">挂号医院</a></li>
+              <li class="" style="border-bottom: 0;" id="checkli">
+                  <div id="checkbt" style="left: 25%;border-top: 3px solid #29aff6;width: 90px;bottom: 0;position: absolute;display: none"></div>
+                  <a href="javascript:toCheck()">检查医院</a>
+              </li>
+          </ul>
+          <div class="am-tabs-bd">
+              <div  id="ct1" class="am-tab-panel am-active" style="padding:0;">
+                  <div data-am-widget="list_news" class="am-list-news am-list-news-default" style="margin:0;">
+                      <div class="am-list-news-bd">
+                          <ul class="am-list" id="contentul">
+                              <li onclick="changePage('3')" class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left"><div class="am-u-sm-3 sev-img-div"><img src="http://weixin.bjyijiahu.com:80/szlyy.jpg" class="sev-img"></div><div class=" am-u-sm-9 am-list-main"><h3 class="am-list-item-hd sev-hospital">北京市医科大学第6临床医学院</h3><div class="am-list-item-text">预约量:0万</div><div class="sev-lab">[医保三甲]</div></div></li>
+
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div id="ct2" class="am-tab-panel " style="padding:0;">
+                  <div data-am-widget="list_news" class="am-list-news am-list-news-default" style="margin:0;">
+                      <div class="am-list-news-bd">
+                          <ul class="am-list" id="contentcheck">
+                             <li onclick="changePage('3')" class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left"><div class="am-u-sm-3 sev-img-div"><img src="http://weixin.bjyijiahu.com:80/szlyy.jpg" class="sev-img"></div><div class=" am-u-sm-9 am-list-main"><h3 class="am-list-item-hd sev-hospital">北京市医科大学第6临床医学院</h3><div class="am-list-item-text">预约量:0万</div><div class="sev-lab">[医保三甲]</div></div></li>
+                            
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+
+<script src="../js/jquery-1.7.1.js"></script>
+<script src="../assets/js/amazeui.min.js"></script>
+
+<script type="text/javascript">
+  function toHos() {
+
+        $("#ct1").addClass("am-active");
+        $("#ct2").removeClass("am-active");
+        $("#checkli").removeClass("am-active");
+        $("#checkbt").hide();
+        $("#ghli").attr("class","am-active");
+        $("#ghbt").show();
+    }
+    function toCheck() {
+        $("#ct2").addClass("am-active");
+        $("#ct1").removeClass("am-active");
+        $("#ghli").removeClass("am-active");
+        $("#checkli").attr("class","am-active");
+        $("#ghbt").hide();
+        $("#checkbt").show();
+    }
+</script>
+</body>
+</html>

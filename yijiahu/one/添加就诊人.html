@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>添加就诊人</title>
+
+  
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+
+
+  <!-- Amaze UI CSS -->
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/framework7.ios.min.css" rel="stylesheet">
+    <link href="../css/framework7.ios.colors.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <style type="text/css">
+  .yjh-cygl-jzr-add-div{
+    width: 70%;
+  }
+  .yjh-cygl-jzr-add-sex-none{
+    background: antiquewhite;
+  }
+  .yjh-cygl-jzr-add-input{
+    border: 0px;
+    outline:none;
+    cursor: pointer;
+    text-align: right;
+    width: 100%
+  }
+</style>
+</head>
+<body>
+
+  <div class="am-g">
+    <div class="am-u-sm-12" style="border-bottom: 1px solid #ddd; padding: 10px;">
+      <div class="am-fl">姓名</div>
+      <div class="am-fr yjh-cygl-jzr-add-div " > 
+        <input class="yjh-cygl-jzr-add-input" type="" name="" required></div>
+      </div>
+      <div class="am-u-sm-12" style="border-bottom: 1px solid #ddd; padding: 10px;">
+        <div class="am-fl">手机号</div>
+        <div class="am-fr yjh-cygl-jzr-add-div" ><input class="yjh-cygl-jzr-add-input" type="" name="" required ></div>
+      </div>
+      <div class="am-u-sm-12" style="border-bottom: 1px solid #ddd; padding: 10px;">
+        <div class="am-fl">证件类型</div> 
+        <div class="am-fr yjh-cygl-jzr-add-div" ><input class="yjh-cygl-jzr-add-input" type="" name="" value="身份证" readonly="readonly"></div>
+      </div>
+      <div class="am-u-sm-12" style="border-bottom: 1px solid #ddd; padding: 10px;">
+        <div class="am-fl">证件号码</div> 
+        <div class="am-fr yjh-cygl-jzr-add-div" ><input style="border: 0px;outline:none;cursor: pointer;    text-align: right;width: 100%;" type="" name="" ></div>
+      </div>
+      <div class="am-u-sm-12" style="border-bottom: 1px solid #ddd; padding: 10px;">
+        <div class="am-fl">性别</div>
+        <div class="am-fr" >
+
+          <span class="am-badge am-badge-primary am-text-default" id="jzr-sex-m" onclick=javascript:changeSex('jzr-sex-m','jzr-sex-w')>男</span>
+          <span class="am-badge am-badge-success am-text-default" id="jzr-sex-w" onclick=javascript:changeSex('jzr-sex-w','jzr-sex-m')>女</span>
+        </div>
+      </div>
+      <div class="am-u-sm-12" style="border-bottom: 1px solid #ddd; padding: 10px;">
+        <div class="am-fl">出生日期</div>
+        <div class="am-fr yjh-cygl-jzr-add-div" ><input class="yjh-cygl-jzr-add-input" type="" name=""></div>
+      </div>
+
+      <div class="am-u-sm-12" style="border-bottom: 1px solid #ddd; padding: 10px;">
+        <div class="am-fl">家庭住址</div>
+        <div class="am-fr yjh-cygl-jzr-add-div" >
+          <input id="location" class="yjh-cygl-jzr-add-input" type="" name="">
+          </div>
+      </div>
+      <div class="am-u-sm-12" style="border-bottom: 1px solid #ddd; padding: 10px;">
+        <div class="am-fl">详细住址</div>
+        <div class="am-fr yjh-cygl-jzr-add-div" ><input class="yjh-cygl-jzr-add-input" type="" name=""></div>
+      </div>
+    </div>
+    <br>
+    <button type="button" class="am-btn am-btn-primary am-btn-block">确认添加</button>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.min.js"></script>
+
+    <script src="../js/framework7.min.js"></script>
+    <script src="../js/regionsObject2.js"></script>
+    <script src="../js/cityPicker.js"></script>
+    <script type="text/javascript">
+      function changeSex(desId,oprId) {
+        $("span#"+desId).removeClass("yjh-cygl-jzr-add-sex-none");
+        $("span#"+oprId).addClass("yjh-cygl-jzr-add-sex-none");
+      }
+      
+    </script>
+    
+  </body>
+  </html>

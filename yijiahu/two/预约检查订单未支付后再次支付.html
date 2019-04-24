@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>预约检查订单未支付后再次支付</title>
+
+  
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+
+
+  <!-- Amaze UI CSS -->
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+
+<div class="am-scrollable-horizontal">
+  <table class="am-table am-table-bordered">
+    <tr><td style="width: 90px;" class="am-text-center">订&nbsp;单&nbsp;号</td><td class="am-text-right">111111111111111111111</td></tr>
+    <tr><td style="width: 90px;" class="am-text-center">就&nbsp;诊&nbsp;人</td><td class="am-text-right">周刚</td></tr>
+    <tr><td style="width: 90px;" class="am-text-center">检查项目</td><td class="am-text-right">心脏三维成像CTA</td></tr>
+    <tr><td style="width: 90px;" class="am-text-center">金&nbsp;&nbsp;&nbsp;&nbsp;额</td><td class="am-text-right">1000.00元</td></tr>
+    <tr><td style="width: 90px;" class="am-text-center">检查时间</td><td class="am-text-right">2019-01-31 09:00-10:00</td></tr>
+    <tr><td style="width: 90px;" class="am-text-center">订单状态</td><td class="am-text-right">未支付(如果已经支付,请不要重复支付)</td></tr>
+    <tr><td style="width: 90px;" class="am-text-center">温馨提示</td><td class="am-text-right"><div>此费用仅为CT扫描费用,在做检查之前根据个人病情需要在影像科护士站补交药品费和材料费</div></td></tr>
+    <tr><td style="width: 90px;" class="am-text-center">注意事项</td><td class="am-text-right"><div>检查前请去除相应检查部分的金属物品.例如:眼睛、假牙、胸罩、腰带、钥匙等</div></td></tr>
+    <tr><td style="width: 90px;" class="am-text-center">订单时间</td><td class="am-text-right">2019-01-30 12:12</td></tr>
+  </table>
+</div>
+
+
+ <button type="button" class="am-btn am-btn-primary am-btn-block" onclick="javascript:window.location.href='预约平台.html'" 
+>立即支付</button>
+ <button type="button" class="am-btn am-btn-primary am-btn-block" id="yyjcqxdd" 
+>取消订单</button>
+
+<div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+  <div class="am-modal-dialog">
+    <div class="am-modal-bd" style="text-align: left;
+    color: #555;">
+      真的要取消订单吗?
+    </div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" style="color: black" data-am-modal-cancel>取消</span>
+      <span class="am-modal-btn" data-am-modal-confirm>返回</span>
+    </div>
+  </div>
+</div>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../assets/js/amazeui.min.js"></script>
+
+  <script type="text/javascript">
+    $("#yyjcqxdd").on("click",function () {
+      $('#my-confirm').modal({
+            relatedTarget: this,
+            onCancel: function() {
+              //变更状态 并跳转
+
+              window.location.href="预约平台.html";
+            }
+      });
+    }) ;
+
+  </script>
+</body>
+</html>

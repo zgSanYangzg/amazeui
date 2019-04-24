@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>检查医院搜索</title>
+
+  
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+
+
+  <!-- Amaze UI CSS -->
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+
+<style type="text/css">
+  .yjh-yypt-xm{
+    color: #333;
+
+  }
+
+</style>
+</head>
+<body>
+
+
+<div  >
+  <div class="am-g">
+    <div class="am-u-sm-12">
+      <div class="am-input-group">
+        <input type="text" id="searchInput" class="am-form-field" value="哈尔滨医科大学第四临床医学院" placeholder="搜索医院">
+        <span class="am-input-group-btn">
+          <button id="searhBtn" class="am-btn am-btn-default" type="button"><span class="am-icon-search"></span> </button>
+        </span>
+      </div>
+    </div>
+
+    
+    <!-- 搜索记录 -->
+    <div class="am-u-sm-12 " id="hisArea" style="display: none">
+        <div  class="am-panel am-panel-default">
+          <header class="am-panel-hd">
+            <h3 class="am-panel-title">搜索记录</h3>
+          </header>
+           <ul class="am-list am-list-static" id="hisAreaUl">
+              <li><span class="hisHosPan">哈尔滨医科大学第四临床医学院</span><span class="am-fr hisHosClose">X</span></li>
+              <li><span class="hisHosPan">哈尔滨医科大学第五临床医学院</span><span class="am-fr hisHosClose">X</span></li>
+              <li><span class="hisHosPan">哈尔滨医科大学第六临床医学院</span><span class="am-fr hisHosClose">X</span></li>
+          </ul>
+          <footer class="am-panel-footer am-text-center" id="deleteAll">清空历史记录</footer>
+        </div>
+    </div>
+
+
+    <div class="am-u-sm-12">
+      <ul class="am-list admin-sidebar-list" id="collapase-nav-1">
+        <li class="am-panel">
+          <a class="yjh-yypt-xm">
+               哈尔滨医科大学第四临床医学院 <i class="am-icon-angle-right am-fr am-margin-right"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../assets/js/amazeui.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      
+      $("#searchInput").on("focus",function () {
+        $("#hisArea").show();
+      });
+      $("#searhBtn").on("click",function(){
+        $("#hisArea").hide();
+      });
+      $("#hisArea ").find("#deleteAll").on("click",function () {
+        $("#hisAreaUl").empty().append("<li id='hisEmpArea'>暂无记录</li>");
+        //hisEmpArea这条数据.增加记录的时候删除
+        $(this).hide();
+      });
+      $("#hisAreaUl li").find(".hisHosClose").on("click",function () {
+        
+        $(this).parent().remove();
+      });
+      $("#hisAreaUl li .hisHosPan").on("click",function () {
+        window.location.href="预约平台.html";
+      });
+    });
+
+  $("#collapase-nav-1 li").click(function () {
+    window.location.href="预约平台.html";
+  });
+  </script>
+</body>
+</html>

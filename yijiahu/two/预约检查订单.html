@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>预约检查订单</title>
+
+  
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+
+
+  <!-- Amaze UI CSS -->
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+
+<!-- 注意事项 -->
+<div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">注意事项</div>
+    <div class="am-modal-bd" style="text-align: left;
+    color: #555;">
+      1、检测预约成功之后,可在预约之<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日起到检查当天取消.<br>
+      2、检查当天不可取消.您是否理解<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;并同意<br>
+    </div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" style="color: black" data-am-modal-cancel>不同意</span>
+      <span class="am-modal-btn" data-am-modal-confirm>同&nbsp;&nbsp;&nbsp;&nbsp;意</span>
+    </div>
+  </div>
+</div>
+
+<!-- 预约信息 -->
+<div class="am-panel am-panel-default">
+  <div class="am-panel-hd " style="background-color: white">
+    <h3 class="am-panel-title">预约信息:</h3>
+  </div>
+  <ul class="am-list am-list-static">
+    <!-- 顺时针 -->
+    <li style="border: 0; padding: 5px 12px 5px 12px;">检查项目:<span>心脏三维成像CTA</span></li>
+    <li style="border: 0; padding: 5px 12px 5px 12px;">检查时间:<span>01-31 08:00-09:00</span></li>
+    <li style="border: 0; padding: 5px 12px 5px 12px;">检查费用:<span>468.00元</span></li>
+    <li style="border: 0; padding: 5px 12px 5px 12px;">检查用时:<span>10分钟</span></li>
+  </ul>
+
+</div>
+
+<!-- 就诊人 check-square-o-->
+<div class="am-panel am-panel-default">
+  <div class="am-panel-hd " style="background-color: white">
+    <h3 class="am-panel-title">选择就诊人:</h3>
+  </div>
+  <ul class="am-list am-list-static">
+    <!-- 顺时针 -->
+    <li style="border: 0; padding: 5px 12px 5px 12px;">
+      <label class="am-radio">
+        <input type="radio" name="radio1" value="" data-am-ucheck checked>
+        周刚,15210819620
+      </label>
+    </li>
+    <li style="border: 0; padding: 5px 12px 5px 12px;">
+      <label class="am-radio">
+        <input type="radio" name="radio1" value="" data-am-ucheck>
+        李四,15210819621
+      </label>
+    </li>
+    <li style="border: 0; padding: 5px 12px 5px 12px;">
+      <label class="am-radio">
+        <input type="radio" name="radio1" value="" data-am-ucheck>
+        王五,15210819622
+      </label>
+    </li>
+  </ul>
+
+</div>
+<!-- 温馨提示 -->
+<div class="am-panel am-panel-default">
+  <div class="am-panel-hd " style="background-color: white">
+    <h3 class="am-panel-title">温馨提示:</h3>
+  </div>
+    <div class="am-panel-bd">
+    此费用仅为CT扫描费用,在做检查之前根据个人病情需要在影像科护士站补交药品费和材料费
+  </div>
+
+</div>
+<!-- 注意事项 -->
+<div class="am-panel am-panel-default">
+  <div class="am-panel-hd " style="background-color: white">
+    <h3 class="am-panel-title">注意事项:</h3>
+  </div>
+    <div class="am-panel-bd">
+    检查前请去除相应检查部分的金属物品.例如:眼睛、假牙、胸罩、腰带、钥匙等
+  </div>
+
+</div>
+<!-- 支付按钮 -->
+<button type="button" class="am-btn am-btn-primary am-btn-block" onclick="javascript:window.location.href='预约检查订单详情.html'" 
+>确认支付</button>
+
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../assets/js/amazeui.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      $('#my-confirm').modal({
+            relatedTarget: this,
+            // onConfirm: function(options) {
+              
+            //   alert("同意,隐藏层");
+            // },
+            // 确定后不关闭 closeOnConfirm: false,
+            onCancel: function() {
+              window.history.go(-1);
+            }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>住院缴费</title>
+
+  
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+
+
+  <!-- Amaze UI CSS -->
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+
+</head>
+<body>
+<!-- header -->
+<div class="am-g" style="border-bottom: 1px solid #ccc;margin:10px 0 10px 0; ">
+  <div class="am-u-sm-9">
+    <img src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" alt="..." class="am-img-thumbnail am-circle" height="80" width="80">
+    <span class="am-text-middle">周刚</span>
+  </div>
+  
+  <div class="am-u-sm-3 am-text-right" style="height: 80px;line-height: 80px"><a href="#">换人<span class="am-icon-male"></span></a></div>
+</div>
+<!-- menu -->
+<div class="am-g" style="margin-bottom: 10px;">
+  <div class="am-u-sm-6 am-text-center" style="border-right:1px solid #ccc;border-bottom:1px solid #ccc; padding: 10px"
+  data-am-modal="{target: '#my-actions'}">
+    <span id="changeDate">当日</span> <span class="am-icon-angle-down am-icon-sm" style="color: blue"></span>
+  </div>
+  <div class="am-u-sm-6 am-text-center" style="border-left: 1px solid #ccc;border-bottom:1px solid #ccc;padding: 10px"
+  data-am-modal="{target: '#my-actions2'}">
+    <span id="changeType">不限</span><span class="am-icon-angle-down am-icon-sm" style="color: blue"></span>
+  </div>
+</div>
+
+<!-- data -->
+<!-- <div style="border-bottom: 1px solid #ccc;height:126px;margin:0 0 10px 0; " >
+  <div class="am-u-sm-3 am-text-center" style="height:126px;" >
+    <div><img src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" alt="..." class="am-img-thumbnail am-circle" height="100" width="100"></div>
+    <div>张胜男</div>
+  </div>
+  <div class="am-u-sm-8" style="height:126px;margin:0 0 10px 0; " >
+    <span>心内四门诊&nbsp;杨庆辉</span><br>
+    <div><span class="am-icon-cny">23.00</span></div>
+    <br><span>2019-01-01 08:00</span>
+    
+  </div>
+  <div class="am-u-sm-1 am-text-center" style="line-height:88px"><i class="am-icon-angle-right am-fr am-margin-right am-icon-sm"></i></div>
+</div> -->
+
+<!-- footer -->
+  
+<div style="position: fixed;bottom:0;width: 100%;">
+  <footer data-am-widget="footer"
+          class="am-footer am-footer-default"
+           data-am-footer="{  }">
+    <div class="am-g" style="height: 50px;">
+      <div class="am-u-sm-8 am-text-left" style="line-height: 50px;">
+        合计:<span class="am-icon-cny" style="color:#333">0.00</span>
+      </div>
+      <div class="am-u-sm-4 am-text-right">
+        <button type="button" style="background-color: #ccc;" class="am-btn am-btn-default">支付</button>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<!-- modal -->
+<div class="am-modal-actions" id="my-actions">
+  <div class="am-modal-actions-group">
+    <ul class="am-list">
+      <li class="am-modal-actions-header">当日</li>
+      <li class="am-modal-actions-header">一周</li>
+      <li class="am-modal-actions-header">一个月</li>
+      <li class="am-modal-actions-header">
+        半年
+      </li>
+      <li class="am-modal-actions-header">
+        一年内
+      </li>
+      <li class="am-modal-actions-header">
+        时间不限
+      </li>
+    </ul>
+  </div>
+  <div class="am-modal-actions-group">
+    <button class="am-btn am-btn-secondary am-btn-block" data-am-modal-close>取消</button>
+  </div>
+</div>
+<div class="am-modal-actions" id="my-actions2">
+  <div class="am-modal-actions-group">
+    <ul class="am-list">
+      <li class="am-modal-actions-header">已支付</li>
+      <li class="am-modal-actions-header">未支付</li>
+      <li class="am-modal-actions-header">
+        不限
+      </li>
+    </ul>
+  </div>
+  <div class="am-modal-actions-group">
+    <button class="am-btn am-btn-secondary am-btn-block" data-am-modal-close>取消</button>
+  </div>
+</div>
+
+
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd" style="text-align: left;width: 100%;border-bottom: 1px solid #dedede;">绑定住院号
+      <a href="javascript: void(0)" class="am-close am-close-spin" style="font-size: 25px;" data-am-modal-close>&times;</a>
+    </div>
+    <div class="am-modal-bd" style="width: 100%;">
+      <div class="am-g">
+        <div class="am-u-sm-12" style="width: 100%;margin: 20px 0 10px 0;">
+          <input type="" name="" class="am-form-field" placeholder="住院号">
+        </div>
+        <div class="am-u-sm-12" style="width: 100%;margin-bottom: 10px;">
+          <button type="button" class="am-btn am-btn-primary am-btn-block " id="bdzyh">确认绑定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../assets/js/amazeui.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+          $("div#my-actions").find("li").on("click",function () {
+          $("span#changeDate").text($(this).text());
+          $("div#my-actions").modal('close');
+        });
+        $("div#my-actions2").find("li").on("click",function () {
+          $("span#changeType").text($(this).text());
+          $("div#my-actions2").modal('close');
+        });
+        $("#doc-modal-1").modal("open");
+        $("button#bdzyh").on("click",function () {
+          $("#doc-modal-1").modal("close");
+        })
+    });
+    
+   
+  </script>
+</body>
+</html>

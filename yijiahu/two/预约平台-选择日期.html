@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>预约平台-选择日期</title>
+
+  
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="../assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+
+
+  <!-- Amaze UI CSS -->
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+
+<style type="text/css">
+.yypt-xzrq{
+  color:black;
+}
+.yypt-xzrq.active{
+  color:#28d028;
+}
+.yypt-xzrq-hd{
+  border-bottom: 1px solid #dedede;
+  margin-bottom:10px;
+  padding:10px;
+
+}
+</style>
+</head>
+<body>
+
+<div style="font-size: 20px;margin-bottom: 10px;">心脏三维成像CTA</div>
+
+<div class="am-scrollable-horizontal">
+  <table class="am-table am-table-bordered am-table-striped am-text-nowrap">
+    <tr >
+      <td ><a href="#" class="yypt-xzrq active" onclick="changeDate(this)">星期一<br>01-15</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期二<br>01-16</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期三<br>01-17</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期四<br>01-18</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期五<br>01-19</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期六<br>01-20</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期日<br>01-01</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期一<br>01-22</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期二<br>01-23</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期三<br>01-24</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期四<br>01-25</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期五<br>01-26</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期六<br>01-27</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期日<br>01-28</a></td>
+      <td><a href="#" class="yypt-xzrq" onclick="changeDate(this)">星期一<br>01-29</a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- 号源 -->
+<div id="yypthydiv">
+  <div class="am-g">
+    <div class="am-u-sm-12 yypt-xzrq-hd funyyptgh" >
+      <div class="am-fl">08:00-09:00</div>
+      <div class="am-fr">剩余:2 <a class="am-badge am-round" style="background-color: #0688ca">预约</a></div>
+    </div>
+    <div class="am-u-sm-12 yypt-xzrq-hd  funyyptgh" >
+      <div class="am-fl">08:00-09:00</div>
+      <div class="am-fr">剩余:2 <a class="am-badge am-round" style="background-color: #0688ca">预约</a></div>
+    </div>
+    <div class="am-u-sm-12 yypt-xzrq-hd  funyyptgh" >
+      <div class="am-fl">08:00-09:00</div>
+      <div class="am-fr">剩余:2 <a class="am-badge am-round" style="background-color: #0688ca">预约</a></div>
+    </div>
+    <div class="am-u-sm-12 yypt-xzrq-hd  funyyptgh" >
+      <div class="am-fl">08:00-09:00</div>
+      <div class="am-fr">剩余:2 <a class="am-badge am-round" style="background-color: #0688ca">预约</a></div>
+    </div>
+    <div class="am-u-sm-12 yypt-xzrq-hd  funyyptgh" >
+      <div class="am-fl">08:00-09:00</div>
+      <div class="am-fr">剩余:2 <a class="am-badge am-round" style="background-color: #0688ca">预约</a></div>
+    </div>
+  </div>
+</div>
+
+
+<div id="empt" class="am-vertical-align" style="height: 200px; display: none;text-align: center;" >
+  <div class="am-vertical-align-middle ">暂无可预约数据</div>
+</div>
+
+
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../assets/js/amazeui.min.js"></script>
+
+  <script type="text/javascript">
+   function changeDate(opr) {
+    var that =opr;
+     $("table.am-table").find("a.active").each(function () {
+       $(this).removeClass("active");
+
+     });
+     $(opr).addClass("active");
+
+     if($(opr).text().indexOf("星期一")<0){
+        $("#yypthydiv").hide();
+        $("#empt").show();
+     }else{
+        $("#yypthydiv").show();
+        $("#empt").hide();
+     }
+   }
+
+$(".funyyptgh").on("click",function () {
+  window.location.href="预约检查订单.html";
+});
+  </script>
+</body>
+</html>
